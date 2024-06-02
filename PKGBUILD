@@ -1,7 +1,7 @@
 # Maintainer: littleblack111 <littleblack11111@gmail.com>
 pkgname=soft-shutdown
 pkgver=1.0
-pkgrel=3
+pkgrel=4
 pkgdesc="Gracefully shutdown userspace GUI applications before system shutdown"
 arch=('any')
 url="https://github.com/littleblack111/soft-shutdown"
@@ -17,6 +17,6 @@ package() {
 
 post_install() {
     echo "Enabling and starting the close-userspace service for the user..."
-    systemctl --user enable close-userspace.service
+    systemctl --user enable shut-userspace.service
     systemctl --user start shut-userspace.service
 }
