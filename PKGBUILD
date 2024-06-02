@@ -12,7 +12,7 @@ sha256sums=('460ff968c7d504a43acb1205cf83de980ad599671ebb601d8db33b02ad675fc2' '
 
 package() {
     install -Dm755 "$srcdir/close-userspace.sh" "$pkgdir/usr/bin/close-userspace.sh"
-    install -Dm644 "$srcdir/close-userspace.service" "$pkgdir/etc/systemd/system/close-userspace.service"
+    install -Dm644 "$srcdir/shut-userspace.service" "$pkgdir/etc/systemd/system/shut-userspace.service"
 }
 
 post_install() {
