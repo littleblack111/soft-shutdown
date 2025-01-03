@@ -2,6 +2,7 @@
 Description=Gracefully shutdown userspace
 DefaultDependencies=no
 Before=display-manager.service shutdown.target reboot.target halt.target
+Conflicts=display-manager.service shutdown.target reboot.target halt.target
 After=multi-user.target
 
 [Service]
@@ -10,5 +11,5 @@ ExecStart=/usr/bin/close-userspace.sh
 RemainAfterExit=true
 
 [Install]
-WantedBy=halt.target reboot.target shutdown.target
+WantedBy=halt.target reboot.target shutdown.target poweroff.target
 
